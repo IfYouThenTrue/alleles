@@ -30,7 +30,8 @@ print(mother.result)
 mother.Porcento()
 print(mother.porcento)
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: [('Aa', '50.0%'), ('aa', '50.0%')]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: Possibilidades:  Aa aa<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[('Aa', '50.0%'), ('aa', '50.0%')]
                           
 * Analise() : shows the percentage
 
@@ -39,3 +40,6 @@ mother.Analise()
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output : Aa : 50.0%<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aa : 50.0%
+
+
+#### All commands are in Brazilian Portuguese, if you are wondering
