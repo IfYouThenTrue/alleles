@@ -15,6 +15,8 @@ Methods:
 ```python
 mother.Procriar(father)
 print(mother.result)
+
+#or print(father.result)
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: ['Aa', 'Aa', 'aa', 'aa']
                           
