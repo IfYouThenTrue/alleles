@@ -8,7 +8,8 @@ Then, you can define objects in this class. Pass the alleles as one string argum
 Code: mother = Parental("Aa")
       father = Parental("aa")
 
-Functions ==>  Procriar(object) : self.result is now an array of the new alleles possibilities
+Functions ==>  
+               Procriar(object) : self.result is now an array of the new alleles possibilities
                           Code: mother.Procriar(father)
                                 print(mother.result)
                           Output: ['Aa', 'Aa', 'aa', 'aa']
