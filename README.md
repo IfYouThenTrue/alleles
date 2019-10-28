@@ -10,23 +10,26 @@ Code: mother = Parental("Aa")
 
 Methods:
 
-*Procriar(object) : self.result is now an array of the new alleles possibilities
-                    ```python
-                    mother.Procriar(father)
-                    print(mother.result)
-                    ```
-                    Output: ['Aa', 'Aa', 'aa', 'aa']
+* Procriar(object) : self.result is now an array of the new alleles possibilities
+
+```python
+mother.Procriar(father)
+print(mother.result)
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: ['Aa', 'Aa', 'aa', 'aa']
                           
-*Porcento() : self.porcento is now an array of the alleles appearing percentage
-              ```python
-              mother.Porcento()
-              print(mother.porcento)
-              ```
-              Output: [('Aa', '50.0%'), ('aa', '50.0%')]
+* Porcento() : self.porcento is now an array of the alleles appearing percentage
+
+```python
+mother.Porcento()
+print(mother.porcento)
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output: [('Aa', '50.0%'), ('aa', '50.0%')]
                           
-*Analise() : shows the percentage
-             ```python
-             mother.Analise()
-             ```
-             Output : Aa : 50.0%
-                      aa : 50.0%
+* Analise() : shows the percentage
+
+```python
+mother.Analise()
+```
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Output : Aa : 50.0%<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;aa : 50.0%
