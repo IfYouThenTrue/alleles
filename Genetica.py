@@ -1,6 +1,6 @@
 class Parental:
 
-    #Construtor do Pai ou Mãe, defini atributos e o gene pode ter, no máximo, 2 elementos
+    #Construtor do Pai ou Mãe, define atributos e o gene pode ter, no máximo, 2 elementos
     def __init__(self,gene):
         if len(gene)>2: self.gene = ""
         else: self.gene = gene
@@ -19,7 +19,7 @@ class Parental:
         self.result,parente.result= result[:],result[:]
 
 
-    #Coloca no atributo .porcento a porcentagem de aparecimento de tais genes em tal cruzamento | Copia a lista, verifica a quantidade, deleta os repetidos e guarda a quantidade e seu respectivo elemento
+    #Coloca no atributo porcento a porcentagem de aparecimento de tais genes em tal cruzamento | Copia a lista, verifica a quantidade, deleta os repetidos e guarda a quantidade e seu respectivo elemento
     def Porcento(self):
         if self.result:
             templist = self.result[:]
