@@ -1,12 +1,16 @@
 # Alleles
-Simple python script for phenotypic percentage calculation
+Simple python script for phenotypic percentage calculation.
 
 After importing the Genetica.py, you will be able to use the Parental Class.
-Code: from Genetica import Parental
+```python
+from Genetica import Parental
+```
 
-Then, you can define objects in this class. Pass the alleles as one string argument.
-Code: mother = Parental("Aa")
-      father = Parental("aa")
+Then, you can define objects in this class. Pass the alleles as a string argument.
+```python
+mother = Parental("Aa")
+father = Parental("aa")
+```
 
 Methods:
 
