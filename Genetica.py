@@ -1,6 +1,8 @@
+import time
 class _NotBiology(Exception):
-    def __init__(self,message="oops"):
+    def __init__(self,message=""):
         self.message = message
+        self.expression = [print(message),time.sleep(2)]
 
 class Parental:
 
@@ -81,8 +83,8 @@ class Parental:
 
 
 
-a = Parental(["A","a"],{"A":1,"a":0})
-b = Parental("Aa",{"A":1,"a":0})
-a.Procriar(b)
-a.Porcento()
-a.Analise()
+# a = Parental(["A","a"],{"A":1,"a":0})
+# b = Parental("Aa",{"A":1,"a":0})
+# a.Procriar(b)
+# a.Porcento()
+# a.Analise()
