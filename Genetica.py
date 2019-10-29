@@ -13,17 +13,30 @@ class Parental:
         self.porcento = []
         self.config=config
 
+    def dominancia(self,parente,dx,y):
+
+        dy = 0
+        if y in parente.config:
+            dy = parente.config[y]
+        return max([dx,dy])
+
     #Relaciona os genes de um parente a outro, guardando no atributo result dos dois | Deixa letras maiúsculas na frente
     def Procriar(self,parente):
         result = list()
         for x in self.gene:
+            dominanciax = 0
+            if x in self.config:
+                dominanciax = self.config[x]
+
             for y in parente.gene:
+                dominanciaNivel = self.dominancia(parente,dominanciax,y)
                 if type(x)==str:
                     if x.isupper():
-                        result.append(x+y)
+                        result.append((x+y,dominanciaNivel))
                         continue
-                result.append("{}{}".format(y,x))
-        print("Possibilidades: ",*set(result))
+                result.append(("{}{}".format(y,x),dominanciaNivel))
+        possibilidades = set(result)
+        print("Possibilidades: ",*[x[0] for x in possibilidades])
         self.result,parente.result= result[:],result[:]
 
 
@@ -59,17 +72,17 @@ class Parental:
         if self.porcento:
             print("\n")
             for i in self.porcento:
-                valor = i[0]
+                valor = i[0][0]
+                grauDeDominancia = i[0][1]
                 porcentagem = i[1]
-                print(i[0],end="")
-                if valor in self.config:
-                    print(" - ",self.config[valor],end="")
-                print(" :",porcentagem)
+                print(valor,end="")
+                print(" :",porcentagem,end="")
+                print(" - ","Grau de dominância: {}".format(grauDeDominancia))
 
 
 
-a = Parental(["A","a"],{"aa":"albino"})
-b = Parental("Aa")
+a = Parental(["A","a"],{"A":1,"a":0})
+b = Parental("Aa",{"A":1,"a":0})
 a.Procriar(b)
 a.Porcento()
 a.Analise()
