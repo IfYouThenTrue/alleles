@@ -1,21 +1,29 @@
+class _NotBiology(Exception):
+    def __init__(self,message="oops"):
+        self.message = message
+
 class Parental:
 
     #Construtor do Pai ou Mãe, define atributos e o gene pode ter, no máximo, 2 elementos
-    def __init__(self,gene):
-        if len(gene)>2: self.gene = ""
-        else: self.gene = gene
+    def __init__(self,genes,config={}):
+        if type(genes) not in [str,list]:
+            raise _NotBiology("The type must be string or array(of strings)")
+        self.gene = genes
         self.result = []
         self.porcento = []
+        self.config=config
 
     #Relaciona os genes de um parente a outro, guardando no atributo result dos dois | Deixa letras maiúsculas na frente
     def Procriar(self,parente):
         result = list()
         for x in self.gene:
             for y in parente.gene:
-                if x.isupper(): result.append(x+y)
-                else: result.append(y+x)
-        possibilidades = set(result)
-        print("Possibilidades: ",*possibilidades)
+                if type(x)==str:
+                    if x.isupper():
+                        result.append(x+y)
+                        continue
+                result.append("{}{}".format(y,x))
+        print("Possibilidades: ",*set(result))
         self.result,parente.result= result[:],result[:]
 
 
@@ -51,12 +59,17 @@ class Parental:
         if self.porcento:
             print("\n")
             for i in self.porcento:
-                print("{} : {}".format(i[0],i[1]))
+                valor = i[0]
+                porcentagem = i[1]
+                print(i[0],end="")
+                if valor in self.config:
+                    print(" - ",self.config[valor],end="")
+                print(" :",porcentagem)
 
 
 
-# a = Parental("Aa")
-# b = Parental("Aa")
-# a.Procriar(b)
-# a.Porcento()
-# a.Analise()
+a = Parental(["A","a"],{"aa":"albino"})
+b = Parental("Aa")
+a.Procriar(b)
+a.Porcento()
+a.Analise()
